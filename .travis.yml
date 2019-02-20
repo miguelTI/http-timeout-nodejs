@@ -4,5 +4,7 @@ node_js:
 branches:
   only:
   - master
-install:
-  - npm install -g codecov
+before-install:
+  - npm install codecov
+script:
+  - npm run test-ci

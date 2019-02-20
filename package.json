@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "jest && codecov"
+    "test": "jest --config jestconfig.json",
+    "test-ci": "jest --config jestconfig.json && codecov"
   },
   "author": "Miguel Alemán <miguel.aleman@rentcars.com>",
   "license": "MIT",
