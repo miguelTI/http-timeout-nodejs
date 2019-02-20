@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "jest"
+    "test": "jest && codecov"
   },
   "author": "Miguel Alemán <miguel.aleman@rentcars.com>",
   "license": "MIT",
@@ -22,5 +22,9 @@
   },
   "engines": {
     "node": "10.10.0"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   }
 }
