@@ -4,12 +4,12 @@ const request = require('supertest');
 const app = require('../app.js');
 
 describe('GET /?t=:seconds', () => {
-    test('receive a request, wait 3 seconds and respond 200', () => {  
+    test('receive a request with a t parameter that is not a number', () => {
         return request(app)
-        .get('/')
-        .expect(200)
+        .get('/?t=A')
+        .expect(400)
     });
-      
+
     test('receive a request with a t parameter, respond after the informed seconds', () => {
         var start = new Date().getTime();
         return request(app)
@@ -22,9 +22,9 @@ describe('GET /?t=:seconds', () => {
         })
     });
 
-    test('receive a request with a t parameter that is not a number', () => {
+    test('receive a request, wait 3 seconds and respond 200', () => {  
         return request(app)
-        .get('/?t=A')
-        .expect(400)
+        .get('/')
+        .expect(200)
     });
 });
