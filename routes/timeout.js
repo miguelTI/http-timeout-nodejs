@@ -8,7 +8,7 @@ function timeout(req, res) {
     }
     console.log(`Waiting ${seconds} second(s)`);
     setTimeout(() => {
-        console.log("Alohomora!");
+        console.log("Oi!");
         res.status(200).send('OK');
     }, seconds * 1000);
 }
