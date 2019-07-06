@@ -3,4 +3,5 @@ node_modules/
 *.jpg
 *.png
 .env
+example.json
 /coverage
